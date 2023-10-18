@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Internet Library{% endblock %}
+
+{% block content %}
+<table class="table mt-5 table-boarded table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Date of Creation</th>
+            <th>Price</th>
+            <th>Pages Quantity</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for book in books %}
+        <tr class="align-middle">
+            <th>{{ book.title }}</th>
+            <th>{{ book.date_of_creation }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.pages_qty }}</th>
+            <th>{{ book.author }}</th>
+            <th>{{ book.genre }}</th>
+            <th><button class="btn btn-primary">Buy</button></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>    
+{% endblock %}

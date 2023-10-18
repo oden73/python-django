@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<div class="card text-center border-primary">
+    
+    
+    
+        <div class="card-body">
+          <h5 class="card-title fs-1 mt-4">{{book.title}} - {{book.author}}</h5>
+          <h6 class="card-title fs-2 mt-3">{{book.genre}}</h6>
+          <p class="card-text mt-4">Was published in: {{book.date_of_creation}}</p>
+          <p class="card-text">Pages Quantity: {{book.pages_qty}}</p>
+          <p class="card-text">Price: {{book.price}}</p>
+          <button class="btn btn-primary">Buy</button>
+        </div>
+
+</div>
+
+{% endblock%}

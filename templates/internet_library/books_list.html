@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Books List{% endblock %}
+
+{%block content%}
+<div class="list-group">
+{%for book in books%}
+    <div class="fs-2 text-center mt-4"> <a href={% url "lib:single_book" book.id %} class="list-group-item list-group-item-action">{{book.title}}<br></a> </div>
+{%endfor%}
+</div>
+{%endblock%}
