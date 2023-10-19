@@ -1,1 +1,1 @@
-# unfinished python-django project of creation internet library
+# Unfinished python-django project of creation internet library
